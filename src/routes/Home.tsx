@@ -1,28 +1,17 @@
-import React, { useEffect, useState } from 'react'
-import {fetchTitle} from "../API/library";
-
+import React from "react";
+import "../sass/Home.scss"
 
 
 const Home = () => {
-    const [something, setSomething] = useState('');
-    const handleChange =(e)=>{
-        setSomething(e.target.value)
-    }
 
-useEffect (() =>{
-    console.log(something)
-}, [something])
-
-const handleClick = () => {
-fetchTitle(something)
-}
   return (
     <>
-    <div>Home</div>
-    <input type="text" value={something} onChange={handleChange} />
-    <button onClick={handleClick}>search</button>
+    <h1 id="welcome-text">Welcome!</h1>
+      <div className="homeContainer">
+      
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

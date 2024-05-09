@@ -1,8 +1,12 @@
 import React from 'react'
+import "../sass/Favorites.scss"
+
 
 const Favorites = () => {
   return (
-    <div>Favorites</div>
+    <>
+    <div className="favContainer"></div>
+    </>
   )
 }
 

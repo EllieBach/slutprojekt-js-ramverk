@@ -1,0 +1,9 @@
+@import "./colors";
+
+@mixin base-container {
+    width: 80vw;
+    height: 70vh;
+    margin: 0 auto;
+    border-radius: 4rem;
+    background-color: $SoftIvory;
+}

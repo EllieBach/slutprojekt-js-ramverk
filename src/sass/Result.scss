@@ -1,0 +1,5 @@
+@import "mixins";
+
+.resultContainer{
+    @include base-container;
+}

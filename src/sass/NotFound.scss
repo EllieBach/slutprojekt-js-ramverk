@@ -1,0 +1,17 @@
+
+@import "mixins";
+.ntContainer{
+    @include base-container;
+    display: flex;
+ flex-direction: column;
+    align-items: center;
+    justify-content: center ;
+#coffeeimg{
+    height: 10rem;
+    width: 10rem;
+}
+
+span{
+    font-weight: bold;
+}
+}

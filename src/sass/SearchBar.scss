@@ -1,0 +1,17 @@
+@import "./colors";
+
+.searchBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2.5rem;
+#searchInput{
+    width: 15rem;
+    height: 3rem;
+    border-radius: 2rem;
+    border-style: none;
+    background-color: $SoftIvory;
+}
+
+
+}

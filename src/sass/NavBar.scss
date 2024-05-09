@@ -1,0 +1,45 @@
+
+@import "./colors";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-bar {
+  background-color: $GentleMoss;
+  height: 15vh;
+  width: 100vw;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5rem; 
+
+
+.nav-link {
+  margin-right: 1rem; 
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $MahoganyBrown;
+  
+}
+
+.logo-container{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#hamster {
+  width: 10rem;
+  height: 10rem;
+}
+#cozycave{
+    margin: -5rem 0 0 2.5rem;
+    width: 5rem;
+    height: 5rem;
+}
+}

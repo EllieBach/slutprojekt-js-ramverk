@@ -1,0 +1,5 @@
+@import "mixins";
+
+.favContainer{
+    @include base-container;
+}
