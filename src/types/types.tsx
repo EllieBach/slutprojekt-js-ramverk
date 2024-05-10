@@ -1,4 +1,4 @@
-export interface TitleType {
+export interface types {
     numFound:      number;
     start:         number;
     numFoundExact: boolean;

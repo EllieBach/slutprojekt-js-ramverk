@@ -1,4 +1,3 @@
-import { createStore } from 'redux';
 import rootReducer from './rootReducer'; // Assuming you have a rootReducer
 
 const store = createStore(rootReducer);
