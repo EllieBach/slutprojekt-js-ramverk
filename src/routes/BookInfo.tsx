@@ -2,7 +2,10 @@ import React from 'react'
 
 const BookInfo = () => {
   return (
-    <div>BookInfo</div>
+    
+    <>
+    {/* <h1>{{item.title}}</h1> */}
+    </>
   )
 }
 

@@ -1,0 +1,25 @@
+@import "./colors";
+#rm-button{
+    height: 2rem;
+    width: 5.5rem;
+    border-radius: 4rem;
+    border-style: none;
+    background-color: $Mauve;
+    color: $SoftIvory;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+#heart {
+    fill: transparent;
+    stroke: red;
+    stroke-width: 20px;
+    transition: all 0.6s linear;
+  }
+  
+  #heart.filled {
+    fill: red;
+    stroke: red;
+    stroke-width: 20px;
+    transition: all 0.6s linear;
+  }

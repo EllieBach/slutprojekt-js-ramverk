@@ -2,4 +2,9 @@
 
 .resultContainer{
     @include base-container;
+
+    .info-card{
+        display: flex;
+        flex-direction: row;
+    }
 }

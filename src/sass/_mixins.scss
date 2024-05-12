@@ -1,9 +1,20 @@
 @import "./colors";
+@import "./fonts";
 
 @mixin base-container {
-    width: 80vw;
+    width: 50vw;
     height: 70vh;
     margin: 0 auto;
     border-radius: 4rem;
     background-color: $SoftIvory;
+}
+
+@mixin title{
+font-family: lobster;
+font-size: 5rem;
+display: flex;
+align-items: center;
+justify-content: center;
+
+color: $MahoganyBrown;
 }

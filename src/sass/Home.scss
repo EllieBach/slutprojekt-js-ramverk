@@ -1,5 +1,11 @@
 @import "mixins";
+@import "./colors";
+
 
 .homeContainer{    
     @include base-container;
+}
+#welcome-text{
+    @include title;
+   
 }

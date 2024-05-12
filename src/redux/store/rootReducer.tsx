@@ -1,19 +1,18 @@
-import { combineReducers } from "@reduxjs/toolkit";
+import { combineReducers } from 'redux';
+import searchReducer from "../slice/SliceSearch";
 
-import {types} from "../../types/types"
-interface SearchState {
-    result: types; 
+interface SearchState{
+    result: types;
 }
 
-
-function searchReducer( action: any) {
-   
- 
+export interface RootState {
+    search: SearchState;
 }
-
 
 const rootReducer = combineReducers({
+  
     search: searchReducer,
-})
+   
+});
 
 export default rootReducer;

@@ -1,15 +1,15 @@
-import React from 'react'
-import { SearchBar } from "../components/SearchBar";
-import ResultContainer from "../components/container/ResultContainer";
-
+import React, { useState } from 'react';
+import  SearchBar  from "../components/Search/SearchBar";
+import ResultContainer from "../components/Search/ResultContainer";
 
 const SearchPage = () => {
+  
   return (
-   <>
-     <SearchBar  /> 
-      <ResultContainer/>
-   </>
-  )
-}
+    <div>
+      <SearchBar  />
+      <ResultContainer  />
+    </div>
+  );
+};
 
-export default SearchPage
+export default SearchPage;

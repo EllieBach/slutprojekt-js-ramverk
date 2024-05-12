@@ -17,7 +17,7 @@ const Root = () => {
             {" "}
             Home
           </NavLink>
-          <NavLink className="nav-link" to="searchPage">
+          <NavLink className="nav-link" to="/searchPage">
             Search
           </NavLink>
           <NavLink className="nav-link" to="favorites">

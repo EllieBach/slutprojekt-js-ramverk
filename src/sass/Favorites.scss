@@ -3,3 +3,7 @@
 .favContainer{
     @include base-container;
 }
+
+#fav-title{
+    @include title;
+}
