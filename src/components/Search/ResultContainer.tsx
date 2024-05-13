@@ -6,6 +6,8 @@ import { useSelector } from 'react-redux';
 import { getSearchResult } from "../../redux/slice/SliceSearch";
 import RmButton from '../RmButton';
 import FavButton from '../FavButton';
+import { NavLink } from 'react-router-dom';
+
 
 export interface SearchResultTypes {
   author?: [];
@@ -33,7 +35,7 @@ const ResultContainer = () => {
         <div key={index}> 
         <div className="info-card">
           <img
-            className="bookimg"
+            className="bookImg"
             src={`https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`} 
           />
        <div className="bookInfo">
@@ -42,8 +44,11 @@ const ResultContainer = () => {
         <p >{book.first_publish_year}</p>
         </div>
         <FavButton/>
+        <NavLink className="nav-link" to="bookInfo">
         <RmButton/>
+        </NavLink>
         </div>
+  
         </div>
       )
       )}

@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import heart from "../assets/images/heart.svg"
+import heartHollow from "../assets/images/FavoriteHollow.svg"
 import "../sass/Buttons.scss"
 
 
@@ -13,7 +13,7 @@ const FavButton = () => {
   }
   return (
     <div id="fav-button" onClick={handleToggleFavorite}>
-   <img id="heart" className={isFavorite ? 'filled' : ''} src={heart} alt="" /></div>
+   <img id="heart" src={heartHollow} alt="" /></div>
   )
 }
 

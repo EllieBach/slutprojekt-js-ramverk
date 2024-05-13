@@ -1,11 +1,25 @@
 @import "mixins";
 @import "./colors";
-
-
+section{
+    padding: 3rem 2rem 0 2rem;
+}
+span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    color: $MahoganyBrown;
+}
 .homeContainer{    
     @include base-container;
 }
 #welcome-text{
     @include title;
    
+}
+.homeText{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
 }

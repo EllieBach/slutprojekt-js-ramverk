@@ -18,9 +18,7 @@ const SearchBar = () => {
     }
   };
 
-  const handleRadioChange = (e) => {
-    setSelectedType(e.target.value);
-  };
+
 
   return (
     <div className="searchBox">
@@ -33,24 +31,7 @@ const SearchBar = () => {
         onKeyDown={handleKeyDown}
       />
 
-      {/* Radio buttons */}
-      <div className="input-container">
-      <input
-        type="radio"
-        value="author"
-        checked={selectedType === "author"}
-        onChange={handleRadioChange}
-      />
-      <label htmlFor="author">Author</label>
-
-      <input
-        type="radio"
-        value="title"
-        checked={selectedType === "title"}
-        onChange={handleRadioChange}
-      />
-      <label htmlFor="title">Title</label>
-    </div>
+   
     </div>
   );
 };
