@@ -10,16 +10,21 @@
     cursor: pointer;
 }
 
+#fav-button{
+    background-color: transparent;
+    border-style: none;
+    cursor: pointer;
+
+}
+#fav-button:hover{
+fill: #C4726D;
+}
 
 #heart {
     fill: transparent;
     stroke: #C4726D;
     stroke-width: 20px;
-    transition: all 0.6s linear;
-    cursor: pointer;
 
- #heart:hover{
-background-color: #C4726D;
- }
+  
 
   }

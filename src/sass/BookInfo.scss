@@ -1,0 +1,38 @@
+@import "./mixins";
+@import "./colors";
+.page-cont {
+  margin-top: 2rem;
+}
+.bookInfoContainer {
+  @include base-container;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.infoBox {
+  grid-area: 4 / 1 / 5 / 2;
+  margin: -3rem 0 0 2rem;
+}
+.basic {
+  grid-area: 1 / 2 / 2 / 4;
+  margin-top: 3rem;
+  margin-left: -10rem;
+}
+.bookImg-info {
+  grid-area: 1 / 1 / 3 / 2;
+  margin: 3rem 0 0 3rem;
+}
+.textBox {
+  grid-area: 2 / 2 / 4 / 4;
+  margin-left: -10rem;
+}
+.leContainer {
+  grid-area: 3 / 1 / 4 / 2;
+  margin: 0 0 0 2rem;
+  display: flex;
+flex-direction: column;
+
+}

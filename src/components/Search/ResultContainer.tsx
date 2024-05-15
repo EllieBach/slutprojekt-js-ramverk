@@ -1,58 +1,60 @@
 import React, { useEffect, useState } from 'react';
-import "../../sass/Result.scss"
-import { SearchResult } from "../../redux/slice/SliceSearch";
-import BookCard from "./DataCard"; 
+import "../../sass/Result.scss";
 import { useSelector } from 'react-redux';
+import DataCard from './DataCard';
+import leftArrow from "../../assets/images/arrow-left.svg";
+import rightArrow from "../../assets/images/arrow-right.svg";
+import { Doc } from "../../types/types";
 import { getSearchResult } from "../../redux/slice/SliceSearch";
-import RmButton from '../RmButton';
-import FavButton from '../FavButton';
-import { NavLink } from 'react-router-dom';
+import { useChopArray } from '../../hooks/useChopArray';
 
-
-export interface SearchResultTypes {
-  author?: [];
-  title?: [];
-}
-
-const ResultContainer = () => { 
-  const [searchResults, setSearchResults] = useState<any>(); 
-  const searchData = useSelector(
-    getSearchResult
-  ) as unknown as SearchResult[]; 
-  useEffect(() => { console.log(searchData)
-    setSearchResults(searchData.title) }, [searchData]) 
-    //useEffekt körs när variabeln i dependency arrayn uppdateras. 
-    //Dependency arrayn är den [] som är precis innan slutet av useEffect
-
-    useEffect(()=>{
-      console.log(searchResults)
-    },
-    [searchResults]
-  )
-  return (
-    <div className="resultContainer">
-      {searchResults && searchResults.map((book, index)=> (
-        <div key={index}> 
-        <div className="info-card">
-          <img
-            className="bookImg"
-            src={`https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`} 
-          />
-       <div className="bookInfo">
-        <p >{book.title}</p>
-        <p >{book.author_name}</p>
-        <p >{book.first_publish_year}</p>
-        </div>
-        <FavButton/>
-        <NavLink className="nav-link" to="bookInfo">
-        <RmButton/>
-        </NavLink>
-        </div>
+const ResultContainer = () => {
+  const [pageChecker, setPageChecker] = useState(0);
+  const [pageArray, setPageArray] = useState<any>([[]]);
+ 
+  const searchResults = useSelector(getSearchResult) as unknown as Doc[];
   
-        </div>
-      )
-      )}
-    </div>
+  useEffect(()=>{
+    console.log("first")
+    const paginatedResults = useChopArray(searchResults);
+    setPageArray(paginatedResults)
+   
+   console.log(searchResults) 
+  },[searchResults])
+
+  useEffect(() => {
+    if (searchResults && searchResults.length > 0) { // Check if searchResults is defined and not empty
+ 
+    }
+  }, [searchResults]);
+
+  const handleNextPage = () => {
+    if (pageChecker === pageArray.length - 1) {
+      setPageChecker(0);
+    } else {
+      setPageChecker(pageChecker + 1);
+    }
+  };
+
+  const handlePrevPage = () => {
+    if (pageChecker === 0) {
+      return;
+    } else {
+      setPageChecker(pageChecker - 1);
+    }
+  };
+
+  return (
+    <>
+     
+     <div className="resultContainer">
+        {pageArray && pageArray[pageChecker].map((item, index)=>( <div key={index}><DataCard book={item} addOrRemove={"add"}/></div>))}
+        <div className="paginator">
+        <img className="leftArrow" src={leftArrow} alt="" onClick={handlePrevPage} />
+        <img className="rightArrow" src={rightArrow} alt="" onClick={handleNextPage} />
+      </div>
+      </div>
+    </>
   );
 };
 

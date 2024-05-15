@@ -19,7 +19,6 @@ const SearchBar = () => {
   };
 
 
-
   return (
     <div className="searchBox">
       <input

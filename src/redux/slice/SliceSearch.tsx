@@ -26,6 +26,7 @@ const sliceSearch = createSlice({
   initialState,
   reducers: {
     setSearchResult(state, action: PayloadAction<SearchResult>) {
+      console.log("testing")
       if (action.payload.type === "title") {
         state.result = action.payload;
       } else if (action.payload.type === "author") {
