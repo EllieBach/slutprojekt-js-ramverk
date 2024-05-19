@@ -1,38 +1,53 @@
 @import "./mixins";
 @import "./colors";
+
 .page-cont {
   margin-top: 2rem;
 }
+
 .bookInfoContainer {
   @include base-container;
+  padding: 2rem;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  gap: 0px 0px;
-  font-family: Arial, Helvetica, sans-serif;
+  grid-template-columns: auto 1fr; /* Auto width for the image and flexible width for text */
+  grid-template-rows: auto auto auto auto; /* Auto height for each row */
+  gap: 1rem; /* Gap between grid items */
+  justify-items: start; /* Align items to the start (left) */
+  align-items: start; /* Align items to the top */
+}
+
+.bookImg-info {
+  grid-column: 1; /* Image in the first column */
+  grid-row: 1 / 4; /* Image spans three rows */
+}
+
+.basic {
+  grid-column: 2; /* Basic info in the second column */
+  grid-row: 1; /* Basic info in the first row */
+}
+
+.textbox {
+  grid-column: 2; /* Textbox in the second column */
+  grid-row: 2; /* Textbox in the second row */
+}
+
+.checkBox {
+  grid-column: 3; /* Checkboxes in the second column */
+  grid-row: 3; /* Checkboxes in the third row */
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Gap between checkbox items */
 }
 
 .infoBox {
-  grid-area: 4 / 1 / 5 / 2;
-  margin: -3rem 0 0 2rem;
+  grid-column: 1; /* InfoBox in the first column */
+  grid-row: 3; /* InfoBox in the fourth row */
 }
-.basic {
-  grid-area: 1 / 2 / 2 / 4;
-  margin-top: 3rem;
-  margin-left: -10rem;
-}
-.bookImg-info {
-  grid-area: 1 / 1 / 3 / 2;
-  margin: 3rem 0 0 3rem;
-}
-.textBox {
-  grid-area: 2 / 2 / 4 / 4;
-  margin-left: -10rem;
-}
-.leContainer {
-  grid-area: 3 / 1 / 4 / 2;
-  margin: 0 0 0 2rem;
-  display: flex;
-flex-direction: column;
 
+img {
+  margin: 0; /* Reset margin */
+}
+
+label {
+  padding-top: 0; /* Reset padding */
 }

@@ -1,44 +1,61 @@
-
-.rate {
-    
+.review{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+.starRating {
     height: 4rem;
-  padding-right:10rem;
+    padding-right: 10rem;
     float: left;
     display: flex;
     flex-direction: row-reverse;
+  
+    input {
+      visibility: hidden;
+    }
+  
+    label {
+      width: 1em;
+      overflow: hidden;
+      white-space: nowrap;
+      cursor: pointer;
+      font-size: 2em;
+      color: #ccc;
+    }
+  
+    label:before {
+      content: '★ ';
+    }
+  
+    input:checked ~ label {
+      color: #ffc700;
+    }
+  
+    label:hover,
+    label:hover ~ label {
+      color: #deb217;
+    }
+  
+    input:checked + label:hover,
+    input:checked + label:hover ~ label,
+    input:checked ~ label:hover,
+    input:checked ~ label:hover ~ label,
+    label:hover ~ input:checked ~ label {
+      color: #c59b08;
+    }
+  }
+  #reviewlabel{
+    margin-left: -15rem;
+  }
+#freeform{
+  border-radius: 16px;
+  border-style: none;
+  text-indent: 0.5rem;
 }
-
-.rate:not(:checked) > input {
-    visibility: hidden;
-}
-
-.rate:not(:checked) > label {
-   
-    width: 1em;
-    overflow: hidden;
-    white-space: nowrap;
-    cursor: pointer;
-    font-size: 2em;
-    color: #ccc;
-}
-
-.rate:not(:checked) > label:before {
-    content: '★ ';
-}
-
-.rate > input:checked ~ label {
-    color: #ffc700;
-}
-
-.rate:not(:checked) > label:hover,
-.rate:not(:checked) > label:hover ~ label {
-    color: #deb217;
-}
-
-.rate > input:checked + label:hover,
-.rate > input:checked + label:hover ~ label,
-.rate > input:checked ~ label:hover,
-.rate > input:checked ~ label:hover ~ label,
-.rate > label:hover ~ input:checked ~ label {
-    color: #c59b08;
+  #submitBtn{
+    width: 3.5rem;
+    height:2rem;
+    border-radius: 16px;
+    border-style: none;
+    margin-top: 0.5rem;
+  }
 }

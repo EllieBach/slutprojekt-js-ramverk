@@ -10,10 +10,10 @@
   }
 
   .paginator {
-    position: absolute; /* Position paginator absolutely */
-    bottom: 0; /* Align paginator to the bottom */
-    left: 50%; /* Align paginator horizontally centered */
-    transform: translateX(-50%); /* Center paginator horizontally */
+    position: absolute; 
+    bottom: 0; 
+    left: 50%; 
+    transform: translateX(-50%); 
     display: flex;
   }
 

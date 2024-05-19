@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import coffee from "../assets/images/noun-coffee-cup-220468.svg";
 import "../sass/NotFound.scss";
 

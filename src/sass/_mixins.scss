@@ -1,9 +1,10 @@
 @import "./colors";
 @import "./fonts";
 
+
 @mixin base-container {
-    width: 55vw;
-    height: 70vh;
+    width: 60vw;
+    height: 80vh;
     margin: 0 auto;
     border-radius: 4rem;
     background-color: $SoftIvory;

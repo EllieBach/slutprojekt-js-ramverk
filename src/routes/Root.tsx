@@ -20,6 +20,9 @@ const Root = () => {
           <NavLink className="nav-link" to="/searchPage">
             Search
           </NavLink>
+          <NavLink className="nav-link" to="myPage">
+My page
+          </NavLink>
           <NavLink className="nav-link" to="favoritesPage">
            <img src={heart} alt="heart" />
           </NavLink>
