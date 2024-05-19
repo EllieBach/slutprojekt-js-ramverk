@@ -67,10 +67,12 @@ const BookInfo = () => {
             <label className="container">
               Read book
               <input
+             
                 type="checkbox"
                 checked={isChecked}
                 onChange={handleCheckboxChange}
                 style={{ margin: "10px" }}
+                
               />
               <span className="checkmark"></span>
             </label>

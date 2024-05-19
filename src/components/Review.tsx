@@ -45,7 +45,7 @@ const Review = ({ value }: TitleReviewProps) => {
         <div className="pagesRead">
           
           <p>
-          <input type="text" onChange={handleAmountPages} value={amountReadPages} /> {value.number_of_pages_median && ` out of ${value.number_of_pages_median}`}</p>
+          <input size="4"type="text" onChange={handleAmountPages} value={amountReadPages} /> {value.number_of_pages_median && ` out of ${value.number_of_pages_median}`}</p>
         </div>
         <div className="starRating rate">
           <input type="radio" id="star5" name="rate" value="5" onChange={handleRating} /> 

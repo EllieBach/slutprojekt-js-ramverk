@@ -9,45 +9,47 @@
   @include base-container;
   padding: 2rem;
   display: grid;
-  grid-template-columns: auto 1fr; /* Auto width for the image and flexible width for text */
-  grid-template-rows: auto auto auto auto; /* Auto height for each row */
-  gap: 1rem; /* Gap between grid items */
-  justify-items: start; /* Align items to the start (left) */
-  align-items: start; /* Align items to the top */
+  grid-template-columns: auto 1fr; 
+  grid-template-rows: auto auto auto auto; 
+  gap: 1rem; 
+  justify-items: start; 
+  align-items: start; 
 }
 
 .bookImg-info {
-  grid-column: 1; /* Image in the first column */
-  grid-row: 1 / 4; /* Image spans three rows */
+  grid-column: 1; 
+  grid-row: 1 / 4;
 }
 
 .basic {
-  grid-column: 2; /* Basic info in the second column */
-  grid-row: 1; /* Basic info in the first row */
+  grid-column: 2;
+  grid-row: 1; 
 }
 
 .textbox {
-  grid-column: 2; /* Textbox in the second column */
-  grid-row: 2; /* Textbox in the second row */
+  grid-column: 2 / span 1; 
+  grid-row: 2; 
+  margin-top: 1rem;   
 }
 
 .checkBox {
-  grid-column: 3; /* Checkboxes in the second column */
-  grid-row: 3; /* Checkboxes in the third row */
+  grid-column: 3;
+  grid-row: 3; 
   display: flex;
   flex-direction: column;
-  gap: 10px; /* Gap between checkbox items */
+  gap: 10px; 
 }
 
 .infoBox {
-  grid-column: 1; /* InfoBox in the first column */
-  grid-row: 3; /* InfoBox in the fourth row */
+  grid-column: 1;
+  grid-row: 3;
 }
 
 img {
-  margin: 0; /* Reset margin */
+  margin: 0;
 }
 
 label {
-  padding-top: 0; /* Reset padding */
+  padding-top: 0; 
 }
+
