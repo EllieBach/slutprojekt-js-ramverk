@@ -3,6 +3,11 @@
  # About
  This project is a library search, where u can find a book a rate it.
 
+ React 
+ Redux
+ Sass
+ routing 
+
 # Installation
 1. clone the repository:
    git clone https://github.com/your-username/your-repository.git
