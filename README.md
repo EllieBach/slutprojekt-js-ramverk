@@ -1,7 +1,7 @@
  # ･:*:･ 。☽🍓 React + TypeScript + Vite 🍓☽。･:*:･
 
  # About
- This project is a library search, where u can find a book a rate it.
+ This project is a library search, where u can find a book and rate it
 
  React 
  Redux
