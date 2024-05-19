@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import "../sass/Rating.scss";
 import { useDispatch } from 'react-redux';
 import { addReadBook } from '../redux/slice/readBookSlice';
-import { Types } from '../types/types'; // Assuming you have a file where Types.Doc is defined
+import { Types } from '../types/types'; 
 
 interface TitleReviewProps {
   value: Types.Doc;
@@ -16,16 +16,16 @@ const Review = ({ value }: TitleReviewProps) => {
 
   const handleAmountPages = (e: React.ChangeEvent<HTMLInputElement>) => {
     const pages = parseInt(e.target.value);
-    // Check if the parsed value is a number
+   
     if (!isNaN(pages)) {
       setAmountReadPages(pages);
     } else {
-      setAmountReadPages(0); // Reset to 0 if input is invalid
+      setAmountReadPages(0); 
     }
   }
 
   const handleRating = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setRating(parseInt(e.target.value)); // Parse the rating value correctly
+    setRating(parseInt(e.target.value));
   };
 
   const handleSubmit = () => {
