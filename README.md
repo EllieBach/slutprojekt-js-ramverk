@@ -1,16 +1,28 @@
  # ･:*:･ 。☽🍓 React + TypeScript + Vite 🍓☽。･:*:･
 
  # About
- This project is a library search, where u can find a book and rate it
+ This project is a library search:
+ * search for a book
+ * favorite a book
+ * write a review
+ * set rating
+ * set pages read
+ * see how mamy books you read
+ * book cover
+   
+## Technologies used:
+* React 
+*  Redux
+*  Sass
+* routing 
 
- React 
- Redux
- Sass
- routing 
-
-# Installation
+## Installation
 1. clone the repository:
    git clone https://github.com/your-username/your-repository.git
 2. Navigate to the project directory:
    cd project-directory
 3. npm install 
+
+## API 
+Open library api
+https://openlibrary.org/dev/docs/api/search
