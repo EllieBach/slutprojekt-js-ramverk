@@ -7,7 +7,7 @@
  * write a review
  * set rating
  * set pages read
- * see how mamy books you read
+ * see how many books you read
  * book cover
    
 ## Technologies used:
