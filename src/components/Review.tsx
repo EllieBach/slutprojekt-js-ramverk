@@ -30,7 +30,7 @@ const Review = ({ value }: TitleReviewProps) => {
 
   const handleSubmit = () => {
     if (amountReadPages !== 0) {
-      console.log("AAAAAAAAAAAA")
+      
       dispatch(addReadBook({ title: value.title, review:review, rating:rating, amountPages:amountReadPages}));
     }
   }

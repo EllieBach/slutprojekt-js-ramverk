@@ -8,7 +8,7 @@ const searchTerm = search.replace(/ /g, "+");
 let response;
 if (searchType ==="title"){
     response = await fetchTitle(searchTerm);
-    dispatch(setSearchResult({type: searchType,title:response.docs }))
+    dispatch(setSearchResult({type: searchType, title: response.docs }))
 
 } else if (searchType ==="author"){
 response === await fetchAuthor(searchTerm);

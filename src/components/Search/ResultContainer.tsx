@@ -15,18 +15,12 @@ const ResultContainer = () => {
   const searchResults = useSelector(getSearchResult) as unknown as Doc[];
   
   useEffect(()=>{
-    console.log("first")
+  
     const paginatedResults = useChopArray(searchResults);
     setPageArray(paginatedResults)
    
-   console.log(searchResults) 
+   
   },[searchResults])
-
-  useEffect(() => {
-    if (searchResults && searchResults.length > 0) { // Check if searchResults is defined and not empty
- 
-    }
-  }, [searchResults]);
 
   const handleNextPage = () => {
     if (pageChecker === pageArray.length - 1) {

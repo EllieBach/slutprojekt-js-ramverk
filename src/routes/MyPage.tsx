@@ -5,16 +5,15 @@ import { selectReadBooks } from "../redux/slice/readBookSlice";
 
 const MyPage = () => {
 
-
   const [reviewBookArray, setReviewBookArray] = useState([]);
-  const fetchReadBooks = useSelector(selectReadBooks);
+  const fetchReadBooks = useSelector(selectReadBooks); //från redux store
 
   useEffect(() => {
     console.log(fetchReadBooks);
     const sliceArray = fetchReadBooks.slice(1);
 
     setReviewBookArray(sliceArray);
-  }, [fetchReadBooks]);
+  }, [fetchReadBooks]); //dependency array
 
   return (
     <>
