@@ -1,17 +1,14 @@
 import React from 'react'
-import { fetchAuthor, fetchTitle } from '../API/library'
+import { fetchByTitle } from '../API/library'
 import { setSearchResult } from '../redux/slice/SliceSearch';
 
 //custom hook
-export const useSearchBar = async(search: string, searchType: string, dispatch:any) => {
+export const useSearchBar = async(search: string, dispatch:any) => {
 const searchTerm = search.replace(/ /g, "+");
-let response;
-if (searchType ==="title"){
-    response = await fetchTitle(searchTerm);
-    dispatch(setSearchResult({type: searchType, title: response.docs }))
+if (search){
+    const response = await fetchByTitle(searchTerm); // hämta böcker
+    dispatch(setSearchResult({ title: response.docs })) // -> sliceSearch
 
-} else if (searchType ==="author"){
-response === await fetchAuthor(searchTerm);
 }
-return response;
+
 }

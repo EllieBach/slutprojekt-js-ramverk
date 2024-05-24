@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react';
 import * as Types from "../types/types";
 import { useDispatch, useSelector } from "react-redux";
 import { updatePagesRead } from "../redux/slice/favoriteSlice"
-import { RootState } from "../redux/store/rootReducer"; // Adjust import path as needed
-
+import { RootState } from "../redux/store/rootReducer"; 
 interface ReadPagesProps {
     book: Types.Doc;
 }
@@ -14,12 +13,13 @@ const ReadPages: React.FC<ReadPagesProps> = ({ book }) => {
     const favorites = useSelector((state: RootState) => state.favorites.books);
 
     useEffect(() => {
-        const favoriteBook = favorites.find(b => b.key === book.key);
+        const favoriteBook = favorites.find(b => b.key === book.key);//kollar ifall book finns favoriserad
         if (favoriteBook && favoriteBook.pagesRead) {
             setPagesRead(favoriteBook.pagesRead);
         }
     }, [favorites, book.key]);
-
+ 
+   
     const handlePages = (e: React.ChangeEvent<HTMLInputElement>) => {
         const value = parseInt(e.target.value);
         if (!isNaN(value)) {

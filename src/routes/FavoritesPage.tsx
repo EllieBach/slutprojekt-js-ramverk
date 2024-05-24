@@ -13,7 +13,7 @@ const FavoritesPage = () => {
 
   const faveoriteResult = useSelector(getFavorites);
   useEffect(()=>{
-    console.log(faveoriteResult)
+   
   setFavBook(faveoriteResult.books)
   }, [faveoriteResult])
   return (

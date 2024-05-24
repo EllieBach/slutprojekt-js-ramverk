@@ -8,17 +8,13 @@ import "../../sass/Buttons.scss"
 import RmButton from "../RmButton";
 
 const DataCard = ({ book, addOrRemove }) => {
-  const dispatch = useDispatch();
-  const isFavorite = book.isFavorite || false;
-
+  const dispatch = useDispatch(); // kan skicka data
+ 
   const handleFavoriteButton = () => {
-    if (isFavorite) {
-    } else {
-      dispatch(addFavorites({ input: book, addOrRemove:addOrRemove}));
-    }
+  
+    dispatch(addFavorites({ input: book, addOrRemove:addOrRemove})); // lägga till fvsar
   };
 
-  const handleReadMore = () => {};
 
   return (
     <div className="info-card">
@@ -35,7 +31,7 @@ const DataCard = ({ book, addOrRemove }) => {
       <div className="button-container">
         <button id="fav-button" onClick={handleFavoriteButton}>
          
-           {isFavorite ? <img src={heart}></img>: <img src={heart}></img>} 
+           {<img src={heart}></img>} 
           
         </button>
     
